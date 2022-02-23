@@ -9,7 +9,6 @@ export const useResultPage = () => {
     const [json, setJson] = React.useState<ObjectValueProps>({ items: [] })
     
     React.useEffect(() => {
-        console.log({ jsonConfig })
         if (shouldRefresh) {
             setJson(typeof jsonConfig === 'string' ? JSON.parse(jsonConfig) : jsonConfig)
             setShouldRefresh(false)

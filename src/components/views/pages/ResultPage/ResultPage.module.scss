@@ -1,0 +1,43 @@
+.ResultPage {
+    height: 100%;
+
+    :global(ul) {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        & > li {
+            margin: 0;
+            padding: 10px 0;
+
+            label {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                
+                & > span {
+                    display: inline-block;
+                    width: 15%;
+                }
+
+                input[type="text"], textarea {
+                    width: 70%;
+                }
+            }
+        }
+    }
+
+    .Fields {
+        min-height: 75%;
+    }
+
+    .Buttons {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+
+        li {
+            margin-right: 10px;
+        }
+    }
+}

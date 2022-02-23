@@ -1,0 +1,24 @@
+.Config {
+    height: 100%;
+
+    :global(.w-tc-editor) {
+        overflow-y: auto !important;
+        height: 100%;
+    }
+
+    .innerContentTop {
+        height: 80%;
+
+        & > textarea {
+            width: 100%;
+            resize: none;
+        }
+    }
+
+    .innerContentBottom {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 20%;
+    }
+}

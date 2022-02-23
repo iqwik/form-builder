@@ -1,26 +1,58 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
     "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
-  },
-  "include": [
-    "src"
-  ]
+        "allowSyntheticDefaultImports": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUnusedParameters": true,
+        "noUnusedLocals": true,
+        "noImplicitReturns": true,
+        "noEmit": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "skipLibCheck": true,
+        "noImplicitAny": false,
+        "declaration": true,
+        "declarationDir": "public/types",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "target": "es6",
+        "jsx": "react",
+        "lib": [
+            "dom",
+            "es2015",
+            "es2016",
+            "es2017",
+            "es2020",
+            "esnext"
+        ],
+        "newLine": "lf",
+        "resolveJsonModule": true,
+        "types": [
+            "node",
+            "webpack-env",
+            "react",
+            "jest"
+        ],
+        "baseUrl": ".",
+        "outDir": "public",
+        "forceConsistentCasingInFileNames": true,
+        "suppressImplicitAnyIndexErrors": true,
+        "checkJs": false,
+        "experimentalDecorators": true,
+        "typeRoots": ["./types.d.ts", "./node_modules/@types"],
+        "paths": {
+          "@assets/*": [ "./src/assets/*" ],
+          "@components/*": [ "./src/components/*" ]
+        },
+        "sourceMap": true
+    },
+    "exclude": [
+        "node_modules",
+        "public"
+    ],
+    "include": [
+        "types.d.ts",
+        "src"
+    ]
 }

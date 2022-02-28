@@ -7,11 +7,13 @@ const ResultPage: React.FC<{}> = () => {
     const { title, renderFields, renderButtons } = useResultPage()
 
     return (
-        <div className={styles.ResultPage}>
-            <h2 style={{ textAlign: 'center' }}>{title || 'Result'}</h2>
-            {renderFields(styles.Fields)}
-            {renderButtons(styles.Buttons)}
-        </div>
+        <>
+            <div className={styles.ResultPage}>
+                <h2 style={{ textAlign: 'center' }}>{title || 'Result'}</h2>
+                {renderFields(styles.Fields)}
+                {renderButtons(styles.Buttons)}
+            </div>
+        </>
     )
 }
 

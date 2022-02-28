@@ -1,4 +1,8 @@
-# Live example: [https://iqwik.github.io/form-builder/public](https://iqwik.github.io/form-builder/public)
+# Live example: [https://iqwik.github.io/form-builder/example](https://iqwik.github.io/form-builder/example)
+
+## React-bootstrap theme
+
+You can use all react-bootstrap attributes for buttons in json
 
 ## Available Scripts
 
@@ -13,8 +17,12 @@ The page will reload if you make edits.\
 
 ### `yarn build`
 
-Builds the app for production to the `public` folder.\
+Builds the app for production to the `example` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
+
+### `yarn lint`
+
+Runs eslint
 
 ### `yarn prunecache`
 

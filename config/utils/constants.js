@@ -1,5 +1,3 @@
 const bundleFolder = 'example'
 
-module.exports = {
-    bundleFolder
-}
+module.exports = bundleFolder

@@ -1,6 +1,6 @@
 const ESLintPlugin = require('eslint-webpack-plugin')
 
-const enableEslint = true
+const enableEslint = false
 
 const eslintProcessing = (plugins) => {
     return enableEslint ? [

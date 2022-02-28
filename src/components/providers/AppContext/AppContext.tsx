@@ -1,6 +1,5 @@
 import React from 'react'
-import { TABS_TITLES } from '@components/views/organisms/Tabs/Tabs.constants'
-import { emptyExampleFields, filledExampleFields } from '@components/constants/utils'
+import { emptyExampleFields, filledExampleFields, TABS_TITLES } from '@components/constants/utils'
 import { AppContextValues } from './AppContext.types'
 
 const defaultJsonConfig: (isEmpty?: boolean) => string = (isEmpty = false) => (isEmpty ? emptyExampleFields : filledExampleFields)

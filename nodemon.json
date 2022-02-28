@@ -6,5 +6,9 @@
     ],
     "events": {
         "restart": "yarn prunecache"
-    }
+    },
+    "ignore": [
+        "node_modules"
+    ],
+    "verbose": true
 }

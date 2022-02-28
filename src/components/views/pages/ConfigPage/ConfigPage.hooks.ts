@@ -1,7 +1,6 @@
 import { useContext, useState, useMemo } from 'react'
 import { AppContext } from '@components/providers'
-import { isValidJSON } from '@components/constants/utils'
-import { TABS_TITLES } from '@components/views/organisms/Tabs/Tabs.constants'
+import { isValidJSON, TABS_TITLES } from '@components/constants/utils'
 
 export const useConfigPage = () => {
     const {

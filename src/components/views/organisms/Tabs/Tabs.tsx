@@ -12,7 +12,7 @@ const Tabs: React.FC<{}> = () => {
     const renderTabs: React.ReactElement[] = React.useMemo(() => (
         tabs.map(({ title, component }: tabValue, index: number) => (
             <Tab
-                className={styles.tabContent} 
+                className={styles.tabContent}
                 eventKey={title}
                 key={`${index}-${title}`}
                 title={title}

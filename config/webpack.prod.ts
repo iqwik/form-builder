@@ -4,7 +4,9 @@ const { DefinePlugin } = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyWebpackPlugin = require( 'copy-webpack-plugin' )
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+
 const common = require('./webpack.common.js')
+const { bundleFolder } = require('./utils')
 
 module.exports = merge(common, {
     mode: 'production',
@@ -16,18 +18,18 @@ module.exports = merge(common, {
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: path.resolve( __dirname, '../src/assets' ),
-                    to: path.resolve( __dirname, '../public/assets' )
+                    from: path.resolve(__dirname, '../src/assets'),
+                    to: path.resolve(__dirname, `../${bundleFolder}/assets`)
                 }
             ]
         }),
         new HtmlWebpackPlugin({
             title: 'Form Builder',
             filename: 'index.html',
-            publicPath: path.resolve(__dirname, '../public'),
+            publicPath: path.resolve(__dirname, `../${bundleFolder}`),
             template: path.resolve(__dirname, './index.html'),
             hash: true,
-            minify: false,
+            minify: true,
             inject: 'body',
             scriptLoading: 'blocking',
         }),
@@ -35,4 +37,4 @@ module.exports = merge(common, {
             'process.env.NODE_ENV': JSON.stringify('production')
         }),
     ]
-});
+})

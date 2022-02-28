@@ -24,7 +24,7 @@ const ConfigPage: React.FC<{}> = () => {
                         onChange={onChangeValue}
                         padding={15}
                         style={{
-                            backgroundColor: "#f5f5f5",
+                            backgroundColor: '#f5f5f5',
                             border: `1px solid ${notValidJSON ? 'red' : 'transparent'}`,
                             fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
                             fontSize: 15,

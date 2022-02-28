@@ -1,13 +1,13 @@
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const { cacheLoader, cssProcessing } = require('./utils');
+const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const { cacheLoader, cssProcessing, bundleFolder } = require('./utils')
 
 module.exports = {
     entry: {
         app: './src/index.tsx',
     },
     output: {
-        path: path.resolve(__dirname, '../public'),
+        path: path.resolve(__dirname, `../${bundleFolder}`),
         globalObject: 'self',
         filename: 'assets/js/[name].js',
         chunkFilename: 'assets/js/[name].js',
@@ -30,7 +30,8 @@ module.exports = {
     resolve: {
         alias: {
             "@assets": path.resolve(__dirname, '../src/assets'),
-            "@components": path.resolve(__dirname, '../src/components/')
+            "@components": path.resolve(__dirname, '../src/components/'),
+            "@styles": path.resolve(__dirname, '../src/styles'),
         },
         extensions: ['.wasm', '.mjs', '.jsx', '.js', '.tsx', '.ts', '.d.ts', '.json', '.scss']
     },

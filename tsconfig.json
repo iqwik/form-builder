@@ -1,6 +1,6 @@
 {
-  "compilerOptions": {
-    "allowJs": true,
+    "compilerOptions": {
+        "allowJs": true,
         "allowSyntheticDefaultImports": true,
         "noFallthroughCasesInSwitch": true,
         "noUnusedParameters": true,
@@ -13,7 +13,7 @@
         "skipLibCheck": true,
         "noImplicitAny": false,
         "declaration": true,
-        "declarationDir": "public/types",
+        "declarationDir": "example/types",
         "module": "esnext",
         "moduleResolution": "node",
         "target": "es6",
@@ -35,24 +35,25 @@
             "jest"
         ],
         "baseUrl": ".",
-        "outDir": "public",
+        "outDir": "example",
         "forceConsistentCasingInFileNames": true,
         "suppressImplicitAnyIndexErrors": true,
         "checkJs": false,
         "experimentalDecorators": true,
         "typeRoots": ["./types.d.ts", "./node_modules/@types"],
         "paths": {
-          "@assets/*": [ "./src/assets/*" ],
-          "@components/*": [ "./src/components/*" ]
+          "@assets/*": ["./src/assets/*"],
+          "@styles/*": ["./src/styles/*"],
+          "@components/*": ["./src/components/*"]
         },
         "sourceMap": true
     },
-    "exclude": [
-        "node_modules",
-        "public"
-    ],
+    "exclude": ["node_modules", "example", ".*/"],
     "include": [
+        ".eslintrc.js",
         "types.d.ts",
-        "src"
+        "src",
+        "babel.config.js",
+        "polyfills.js"
     ]
 }

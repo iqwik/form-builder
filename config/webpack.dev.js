@@ -1,16 +1,16 @@
-const path = require('path');
-const merge = require('webpack-merge');
-const { DefinePlugin } = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { eslintProcessing } = require('./utils');
+const path = require('path')
+const merge = require('webpack-merge')
+const { DefinePlugin } = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { eslintProcessing, bundleFolder } = require('./utils')
 
-const common = require('./webpack.common.js');
+const common = require('./webpack.common.js')
 
 module.exports = merge(common, {
     mode: 'development',
     devtool: 'cheap-module-source-map',
     devServer: {
-        contentBase: path.resolve(__dirname, '../public'),
+        contentBase: path.resolve(__dirname, `../${bundleFolder}`),
         open: true,
         hot: true,
     },
@@ -29,4 +29,4 @@ module.exports = merge(common, {
             }),
         ]
     )
-});
+})

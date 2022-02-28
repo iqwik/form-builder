@@ -42,7 +42,7 @@ const cssProcessing = ({ withModules = true }) => {
                 loader: 'sass-resources-loader',
                 options: {
                     resources: [
-                        path.resolve(__dirname, '../../src/assets/styles/_variables.scss')
+                        path.resolve(__dirname, '../../src/styles/_variables.scss')
                     ],
                 }
             },

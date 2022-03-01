@@ -7,6 +7,9 @@ import '@styles/theme.scss'
 const App: React.FC<{}> = () => (
     <AppContextProvider>
         <div className="wrapper">
+            <p>
+                &#8592;&nbsp; <a href="https://github.com/iqwik/form-builder">back to repo</a>
+            </p>
             <Tabs />
         </div>
     </AppContextProvider>

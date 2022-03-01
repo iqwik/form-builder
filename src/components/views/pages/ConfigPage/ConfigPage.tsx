@@ -28,7 +28,7 @@ const ConfigPage: React.FC<{}> = () => {
                             border: `1px solid ${notValidJSON ? 'red' : 'transparent'}`,
                             fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
                             fontSize: 15,
-                            height: '80%',
+                            height: '70%',
                         }}
                     />
                     {notValidJSON && (<small style={{ color: 'red' }}>JSON code not valid. Please check your code</small>)}

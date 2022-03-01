@@ -1,6 +1,5 @@
 .Tabs {
     z-index: 1;
-    height: 100%;
     
     :global(.nav-tabs .nav-link:hover) {
         background-color: #fff;
@@ -11,7 +10,7 @@
     }
 
     :global(.tab-content) {
-        height: calc(100% - 42px);
+        // height: calc(100% - 42px);
         background-color: #fff;
     }
 

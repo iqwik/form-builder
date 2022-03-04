@@ -28,7 +28,7 @@ const CONFETTI_ITEMS_TYPES = {
     LINE: 'line',
 }
 
-export const confettiService = {
+export const ConfettiService = {
     generateParticles({ width, height, maxParticles }: ConfettiServiceGenerateParticlesProps) {
         const types = [
             CONFETTI_ITEMS_TYPES.CIRCLE,
@@ -127,21 +127,5 @@ export const confettiService = {
         this.update({
             width, height, particles, maxParticles,
         })
-    },
-
-    run(canvas) {
-        const canvasContext = canvas.getContext('2d')
-        const width = window.innerWidth
-        const height = window.innerHeight
-        canvas.width = width
-        canvas.height = height
-        const maxParticles = 150
-        const particles = this.generateParticles({ width, height, maxParticles })
-
-        setInterval(() => {
-            this.draw({
-                width, height, maxParticles, particles, canvasContext,
-            })
-        }, 23)
     },
 }

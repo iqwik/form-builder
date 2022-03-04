@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-implied-eval, consistent-return */
 import React from 'react'
 import { ConfettiService } from './Confetti.service'
 
